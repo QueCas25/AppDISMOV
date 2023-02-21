@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Proyecto DISMOV</string>
+    <string name="InicioSesion">Sign In</string>
+    <string name="NoRegistrado">Not registered yet? Do it here</string>
+    <string name="EsContra">Type your password</string>
+    <string name="EsCorreo">Type your email</string>
+
+</resources>
