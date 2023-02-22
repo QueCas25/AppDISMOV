@@ -2,7 +2,20 @@
     <string name="app_name">Proyecto DISMOV</string>
     <string name="InicioSesion">Iniciar Sesión</string>
     <string name="NoRegistrado">¿Aun no estas registrado? Hazlo aqui</string>
-    <string name="EsContra">Escribe tu contraseña</string>
-    <string name="EsCorreo">Escribe tu correo electronico</string>
+    <string name="EsContra">_</string>
+    <string name="EsCorreo">_</string>
+    <string name="cleng">ES/ENG</string>
+    <string name="EmailLogin">Correo Electronico</string>
+    <string name="ContraLogin">Contraseña</string>
+    <string name="bienve">¡Bienvenid@!</string>
+    <string name="closesesion">Cerrar Sesión</string>
+    <string name="cleng2">ES/ENG</string>
+    <string name="emailregis">Correo Electronico</string>
+    <string name="contraregis">Ingrese su contraseña</string>
+    <string name="contrarepetida">Confirme su contraseña</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="cleng3">ES/ENG</string>
+    <string name="yatienecuenta">¿Ya tienes una cuenta? ¡Inicia sesión aqui!</string>
+
 
 </resources>

@@ -2,20 +2,42 @@ package com.example.proyectodismov
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Switch
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.proyectodismov.databinding.ActivitySignInBinding
 import com.google.firebase.auth.FirebaseAuth
+import java.util.*
 
 class SignInActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySignInBinding
     private lateinit var firebaseAuth: FirebaseAuth
 
+    private lateinit var cleng:Switch
+    private lateinit var correo:TextView
+    private lateinit var contra:TextView
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignInBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        cleng = findViewById(R.id.cleng)
+        correo= findViewById(R.id.EmailLogin)
+        contra= findViewById(R.id.ContraLogin)
+
+        cleng.setOnCheckedChangeListener{ _, isChecked ->
+            if(isChecked)
+            {
+            actualizarResource("en")
+            }
+            else
+            { actualizarResource("es")
+            }
+        }
 
 
         firebaseAuth = FirebaseAuth.getInstance()
@@ -54,4 +76,21 @@ class SignInActivity : AppCompatActivity() {
             }
         }
     }
+
+    fun actualizarResource(cambio:String){
+        val recursos = resources
+        val displayMetrics = recursos.displayMetrics
+        val configuracion  = resources.configuration
+        configuracion.setLocale(Locale(cambio))
+        recursos.updateConfiguration(configuracion, displayMetrics)
+        configuracion.locale = Locale(cambio)
+        resources.updateConfiguration(configuracion, displayMetrics)
+
+        cleng.text = recursos.getString(R.string.cleng)
+        binding.button.text= recursos.getString(R.string.InicioSesion)
+        binding.textView.text = recursos.getString(R.string.NoRegistrado)
+        correo.text = recursos.getString(R.string.EmailLogin)
+        contra.text = recursos.getString(R.string.ContraLogin)
+    }
+
 }

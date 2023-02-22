@@ -3,7 +3,20 @@
     <string name="app_name">Proyecto DISMOV</string>
     <string name="InicioSesion">Sign In</string>
     <string name="NoRegistrado">Not registered yet? Do it here</string>
-    <string name="EsContra">Type your password</string>
-    <string name="EsCorreo">Type your email</string>
+    <string name="EsContra">-</string>
+    <string name="EsCorreo">-</string>
+    <string name="cleng">ENG/ES</string>
+    <string name="EmailLogin">Email</string>
+    <string name="ContraLogin">Password</string>
+    <string name="bienve">¡Welcome!</string>
+    <string name="closesesion">Log Out</string>
+    <string name="cleng2">ENG/ES</string>
+    <string name="emailregis">Type your email</string>
+    <string name="contraregis">Type your password</string>
+    <string name="contrarepetida">Confirm your passworda</string>
+    <string name="registrarse">Sign Up</string>
+    <string name="cleng3">ENG/ES</string>
+    <string name="yatienecuenta">Already have an account? Log in here!</string>
+
 
 </resources>
