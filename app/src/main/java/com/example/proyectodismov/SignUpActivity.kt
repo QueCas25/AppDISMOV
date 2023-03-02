@@ -63,14 +63,15 @@ class SignUpActivity : AppCompatActivity() {
                             sendEmailVerification()
                             startActivity(intent)
                         } else {
-                            Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT)
+                            Toast.makeText(this,"Su correo o contraseña son incorrectos", Toast.LENGTH_SHORT).show()
                         }
                     }
                 } else {
-                    Toast.makeText(this, "Password is not matching", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show()
                 }
             } else {
-                Toast.makeText(this, "Empty Fields Are not Allowed !!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Los campos vacios no estan permitidos", Toast.LENGTH_SHORT).show()
 
             }
         }

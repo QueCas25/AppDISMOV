@@ -10,7 +10,8 @@ import com.example.proyectodismov.databinding.ActivitySignInBinding
 import com.google.firebase.auth.FirebaseAuth
 import java.util.*
 
-class SignInActivity : AppCompatActivity() {
+class SignInActivity : AppCompatActivity()
+{
 
     private lateinit var binding: ActivitySignInBinding
     private lateinit var firebaseAuth: FirebaseAuth
@@ -20,7 +21,8 @@ class SignInActivity : AppCompatActivity() {
     private lateinit var contra:TextView
 
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?)
+    {
         super.onCreate(savedInstanceState)
         binding = ActivitySignInBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -47,17 +49,31 @@ class SignInActivity : AppCompatActivity() {
         }
 
         binding.button.setOnClickListener {
+            val obtenido=false
             val email = binding.emailEt.text.toString()
             val pass = binding.passET.text.toString()
+            val admin = arrayOf("jjquecas@gmail.com", "christopherplumamireles353@gmail.com", "maurv99m69@gmail.com")
+            val encontrado = admin.contains(email)
+                println(encontrado) // true
 
-            if (email.isNotEmpty() && pass.isNotEmpty()) {
 
+
+            if (email.isNotEmpty() && pass.isNotEmpty())
+            {
                 firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener {
-                    if (it.isSuccessful) {
+                    if (it.isSuccessful)
+                    {
                         val intent = Intent(this, MainActivity::class.java)
+                        val intent2 = Intent(this, MainActivity2::class.java)
                         val user = firebaseAuth.currentUser
                         val verifica = user?.isEmailVerified()
-                        if(verifica==true){
+                        obtenido
+
+                        if(verifica==true && encontrado==true )
+                        {
+                            startActivity(intent2)
+                        }
+                        if(verifica==true && encontrado==false) {
                             startActivity(intent)
                         }
                         else
@@ -65,17 +81,24 @@ class SignInActivity : AppCompatActivity() {
                             Toast.makeText(this, "¡Verifique su correo electronico!", Toast.LENGTH_SHORT).show()
                         }
 
-                    } else {
-                        Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
-
+                    } else
+                    {
+                        Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT)
+                        Toast.makeText(this,"Su correo o contraseña son incorrectos", Toast.LENGTH_SHORT).show()
                     }
                 }
-            } else {
+
+            }
+            else
+            {
                 Toast.makeText(this, "¡Tiene que llenar todos los campos!", Toast.LENGTH_SHORT).show()
 
             }
+
+            }
+
         }
-    }
+
 
     fun actualizarResource(cambio:String){
         val recursos = resources
@@ -92,5 +115,6 @@ class SignInActivity : AppCompatActivity() {
         correo.text = recursos.getString(R.string.EmailLogin)
         contra.text = recursos.getString(R.string.ContraLogin)
     }
+
 
 }

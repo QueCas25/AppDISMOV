@@ -13,10 +13,13 @@
     <string name="cleng2">ENG/ES</string>
     <string name="emailregis">Type your email</string>
     <string name="contraregis">Type your password</string>
-    <string name="contrarepetida">Confirm your passworda</string>
+    <string name="contrarepetida">Confirm your password</string>
     <string name="registrarse">Sign Up</string>
     <string name="cleng3">ENG/ES</string>
     <string name="yatienecuenta">Already have an account? Log in here!</string>
+    <string name="closesesion2">Log Out Admin</string>
+    <string name="esadmin">Welcome Admin!</string>
+    <string name="cleng4">ENG/ES</string>
 
 
 </resources>

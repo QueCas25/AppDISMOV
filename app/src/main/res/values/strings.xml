@@ -16,6 +16,9 @@
     <string name="registrarse">Registrarse</string>
     <string name="cleng3">ES/ENG</string>
     <string name="yatienecuenta">¿Ya tienes una cuenta? ¡Inicia sesión aqui!</string>
+    <string name="closesesion2">Cerrar sesion admin</string>
+    <string name="esadmin">Bienvenid@ Administrador/a</string>
+    <string name="cleng4">ES/ENG</string>
 
 
 </resources>
