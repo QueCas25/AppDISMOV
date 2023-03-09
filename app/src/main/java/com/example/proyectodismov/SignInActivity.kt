@@ -15,7 +15,6 @@ class SignInActivity : AppCompatActivity()
 
     private lateinit var binding: ActivitySignInBinding
     private lateinit var firebaseAuth: FirebaseAuth
-
     private lateinit var cleng:Switch
     private lateinit var correo:TextView
     private lateinit var contra:TextView
@@ -44,7 +43,7 @@ class SignInActivity : AppCompatActivity()
 
         firebaseAuth = FirebaseAuth.getInstance()
         binding.textView.setOnClickListener {
-            val intent = Intent(this, SignUpActivity::class.java)
+            val intent = Intent(this, UserSignUpActivity::class.java)
             startActivity(intent)
         }
 
@@ -52,9 +51,9 @@ class SignInActivity : AppCompatActivity()
             val obtenido=false
             val email = binding.emailEt.text.toString()
             val pass = binding.passET.text.toString()
-            val admin = arrayOf("jjquecas@gmail.com", "christopherplumamireles353@gmail.com", "maurv99m69@gmail.com")
+            val admin = arrayOf("christopherplumamireles353@gmail.com", "maurv99m69@gmail.com")
             val encontrado = admin.contains(email)
-                println(encontrado) // true
+            println(encontrado) // true
 
 
 

@@ -19,6 +19,9 @@
     <string name="closesesion2">Cerrar sesion admin</string>
     <string name="esadmin">Bienvenid@ Administrador/a</string>
     <string name="cleng4">ES/ENG</string>
+    <string name="userregis">Ingrese su nombre de usuario</string>
+    <string name="cleng5">ES/ENG</string>
+    <string name="userregis1">Ingrese su nombre de usuario</string>
 
 
 </resources>
