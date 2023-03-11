@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var cerrarsesion: Button
     private lateinit var videollamada: Button
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -61,5 +62,6 @@ class MainActivity : AppCompatActivity() {
         cleng2.text = recursos.getString(R.string.cleng2)
         bienve.text = recursos.getString(R.string.bienve)
         cerrarsesion.text = recursos.getString(R.string.closesesion)
+        videollamada.text = recursos.getString(R.string.videoboton)
     }
 }

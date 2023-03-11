@@ -22,6 +22,12 @@
     <string name="cleng4">ENG/ES</string>
     <string name="cleng5">ENG/ES</string>
     <string name="userregis1">Type your username</string>
+    <string name="joinbutton"> Join </string>
+    <string name="logoutbutton">Back</string>
+    <string name="porfavor">Please share this code with your friends to start video call.</string>
+    <string name="codigo">Secret Code</string>
+    <string name="cleng6">ENG/ES</string>
+    <string name="videoboton">Videocall</string>
 
 
 </resources>

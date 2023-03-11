@@ -73,16 +73,18 @@
 
     <Button
         android:id="@+id/videocall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="345dp"
+        android:layout_height="58dp"
         android:layout_marginStart="50dp"
         android:layout_marginTop="39dp"
         android:layout_marginEnd="267dp"
         android:layout_marginBottom="117dp"
-        android:text="Button"
+        android:text="@string/videoboton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/closesesion" />
+        app:layout_constraintTop_toBottomOf="@+id/closesesion"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

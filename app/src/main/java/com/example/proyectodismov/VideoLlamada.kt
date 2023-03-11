@@ -8,7 +8,9 @@ import android.content.Intent
 import android.widget.Switch
 import android.widget.TextView
 import android.widget.Toast
+import com.example.proyectodismov.databinding.ActivityUserSignUpBinding
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import database.usuario
 import java.net.MalformedURLException
@@ -29,6 +31,9 @@ class VideoLlamada : AppCompatActivity() {
     private lateinit var binding: ActivityVideoLlamadaBinding
     lateinit var auth:FirebaseAuth
 
+    private lateinit var cleng6: Switch
+    private lateinit var porfavorma: TextView
+    lateinit var database: FirebaseFirestore
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityVideoLlamadaBinding.inflate(layoutInflater)
@@ -36,6 +41,7 @@ class VideoLlamada : AppCompatActivity() {
         supportActionBar?.hide()
 
         auth = Firebase.auth
+
         if(auth.currentUser == null) {
             Toast.makeText(applicationContext, "Por favor logeame", Toast.LENGTH_SHORT).show()
             startActivity(Intent(this, UserSignInActivity::class.java))
@@ -47,8 +53,7 @@ class VideoLlamada : AppCompatActivity() {
                 serverUrl = URL("https://meet.jit.si")
                 val options = JitsiMeetConferenceOptions.Builder()
                     .setServerURL(serverUrl)
-                    .setAudioMuted(true)
-                    .setVideoMuted(true)
+                    .setFeatureFlag("welcomepage.enabled",false)
                     .build();
                 JitsiMeet.setDefaultConferenceOptions(options)
             }
@@ -60,9 +65,8 @@ class VideoLlamada : AppCompatActivity() {
             binding.joinBtn.setOnClickListener{
                 val options = JitsiMeetConferenceOptions.Builder()
                     .setRoom(binding.codeBox.text.toString())
-                    .setAudioMuted(true)
-                    .setVideoMuted(true)
-                    .build()
+                    .setFeatureFlag("welcomepage.enabled",false)
+                    .build();
                 JitsiMeetActivity.launch(this, options)
             }
 
@@ -76,6 +80,20 @@ class VideoLlamada : AppCompatActivity() {
         }
 
 
+    fun actualizarResource(cambio:String){
+        val recursos = resources
+        val displayMetrics = recursos.displayMetrics
+        val configuracion  = resources.configuration
+        configuracion.setLocale(Locale(cambio))
+        recursos.updateConfiguration(configuracion, displayMetrics)
+        configuracion.locale = Locale(cambio)
+        resources.updateConfiguration(configuracion, displayMetrics)
 
+        cleng6.text = recursos.getString(R.string.cleng6)
+        porfavorma.text = recursos.getString(R.string.porfavor)
+        binding.logOut.text = recursos.getString(R.string.logoutbutton)
+        binding.joinBtn.text = recursos.getString(R.string.joinbutton)
+
+    }
 
     }

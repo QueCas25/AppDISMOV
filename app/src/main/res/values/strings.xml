@@ -22,6 +22,12 @@
     <string name="userregis">Ingrese su nombre de usuario</string>
     <string name="cleng5">ES/ENG</string>
     <string name="userregis1">Ingrese su nombre de usuario</string>
+    <string name="joinbutton"> Unirse </string>
+    <string name="logoutbutton">Regresar</string>
+    <string name="porfavor">Por favor comparte este codigo con tus amigos para poder unirse</string>
+    <string name="codigo">Codigo Secreto</string>
+    <string name="cleng6">ES/ENG</string>
+    <string name="videoboton">Videollamada</string>
 
 
 </resources>

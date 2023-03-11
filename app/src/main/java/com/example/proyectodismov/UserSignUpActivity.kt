@@ -107,11 +107,9 @@ class UserSignUpActivity: AppCompatActivity() {
         }
     }
 
-    fun autenticarRegistro(correoe:String, contrasena:String , nombreusuario:String)
-    {
+    fun autenticarRegistro(correoe:String, contrasena:String , nombreusuario:String) {
         val superusuario = usuario(correoe, contrasena,nombreusuario)
-
-            auth.createUserWithEmailAndPassword(correoe, contrasena).addOnCompleteListener{ task ->
+            auth.createUserWithEmailAndPassword(correoe, contrasena).addOnCompleteListener{task ->
                 Toast.makeText(this, "Estoy ejecutandome Javi la funcion 22", Toast.LENGTH_SHORT).show()
                 if (task.isSuccessful) {
                     database.collection("Usuarios")
@@ -125,10 +123,9 @@ class UserSignUpActivity: AppCompatActivity() {
                 }
                 else
                 {
-                    Toast.makeText(this, "No se porque mierda no nos podemos autenticar", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "No hemos podido autenticar", Toast.LENGTH_SHORT).show()
                 }
             }
-
     }
 
     fun actualizarResource(cambio:String){

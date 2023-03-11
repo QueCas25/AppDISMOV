@@ -3,4 +3,10 @@
     <string name="userregis">Ingrese su nombre de usuario</string>
     <string name="cleng5">ES/ENG</string>
     <string name="userregis1">Type your username</string>
+    <string name="joinbutton"> Unirse </string>
+    <string name="logoutbutton">Regresar</string>
+    <string name="porfavor">Please share this code with your friends to start video call.</string>
+    <string name="codigo">Codigo Secreto</string>
+    <string name="cleng6">ES/ENG</string>
+    <string name="videoboton">Videollamada</string>
 </resources>

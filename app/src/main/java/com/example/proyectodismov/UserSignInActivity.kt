@@ -33,7 +33,6 @@ class UserSignInActivity : AppCompatActivity() {
         auth = Firebase.auth
 
         binding.button.setOnClickListener{
-
         correoe = binding.emailEt.text.toString()
         contrasena = binding.passET.text.toString()
 
