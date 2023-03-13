@@ -11,7 +11,7 @@ android {
     defaultConfig {
         applicationId "com.example.proyectodismov"
         minSdk 24
-        targetSdk 33
+        targetSdk 32
         versionCode 1
         versionName "1.0"
 
@@ -50,5 +50,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     implementation 'com.google.firebase:firebase-auth-ktx'
     implementation 'com.google.firebase:firebase-firestore-ktx'
-    implementation ('org.jitsi.react:jitsi-meet-sdk:+') { transitive = true }
+    implementation ('org.jitsi.react:jitsi-meet-sdk:5.1.0') { transitive = true }
 }
